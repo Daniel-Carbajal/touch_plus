@@ -10,29 +10,32 @@ Built as my first Go project for a distributed systems course, with a focus on f
 **Solution programming language**: Go 
 
 <h2>Compile and run instructions:</h2>
-Perform these steps within project directory
-<ol>
-    <li>Run 'go build' in project directory</li>
-        '''bash
-        go build
-        '''
-        You can now run the executable using "./touch_plus [filePath]". However to run the executable without needing to specify or be withing the project directory continue with the following steps.
-    <li>Install the executable</li>
-        '''bash
-        go install .
-        '''
-    <li>Add the Go install directory to your system's shell path </li>
-        This enables you to run the programs executable without specifying where the executable is.
-        '''bash
-        export PATH="$PATH:$(go env GOPATH)/bin"
-        ''' 
-</ol>
+**Perform these steps within project directory**<br>
+<h3>1. Run 'go build' in project directory</h3>
+
+```bash
+go build
+```
+
+<p>You can now run the executable using `./touch_plus [filePath]`. However to run the executable without needing to specify or be withing the project directory continue with the following steps.</p>
+<h3>2. Install the executable:</h3>
+
+```bash
+go install .
+```
+<h3>3. Add the Go install directory to your system's shell path</h3>
+This enables you to run the programs executable without specifying where the executable is.
+
+```bash
+export PATH="$PATH:$(go env GOPATH)/bin"
+```
 
 <h2>Using touch_plus</h2>
 Run the executable with:
-'''bash
+
+```bash
 touch_plus <filePath>
-'''
+```
 
 Where filePath leads to a pre-existing file or a new one you want to create.
 <br>
