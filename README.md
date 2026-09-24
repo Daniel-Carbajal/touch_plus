@@ -1,5 +1,5 @@
 <h1>touch_plus</h1>
-A lightweight command-line file utility built in Go using only the standard library. It accepts a file path, creates and initializes the file if it does not exist, and provides an interactive loop for reading its contents, appending text, and quitting.
+A lightweight command-line file utility built in Go using only the standard library. It accepts a file path, creates and initializes the file if it does not exist, and provides an interactive loop for reading its contents, overwriting the file with user input, and quitting.
 
 Built as my first Go project for a distributed systems course, with a focus on file I/O, command-line input, error handling, and resource cleanup.
 
@@ -42,7 +42,7 @@ Where filePath leads to a pre-existing file or a new one you want to create.
 Within the program you can run the following commands to perform various actions:
 <ul>
     <li>[read] - display the contents of the file</li>
-    <li>[write] [args] - append the entered arguments to the file</li>
+    <li>[write] [args] - overwrite the current contents of the file with the entered arguments</li>
     <li>[quit] - close the program</li>
 </ul>
     

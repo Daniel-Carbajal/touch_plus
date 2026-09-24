@@ -47,7 +47,7 @@ func main(){
 	} 
 
 	// Open the file
-	file, err = os.OpenFile(filePath, os.O_RDWR|os.O_APPEND, 0666)
+	file, err = os.OpenFile(filePath, os.O_RDWR, 0666)
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 		return
@@ -92,7 +92,12 @@ func main(){
 			}
 
 		} else if command == "write" {                // User writes
-			_, err = file.WriteString(content)
+			err := os.Truncate(filePath, 0) // -> truncate file before user writes new string
+			if err != nil {
+				fmt.Println("Failed to truncate file:", err)
+			}
+
+			_, err = file.WriteString(content) // write user input string
 			if err != nil {
 				fmt.Println("Error writing to file:", err)
 			}
